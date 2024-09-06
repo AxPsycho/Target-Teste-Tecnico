@@ -1,0 +1,42 @@
+using System;
+
+class Target5
+{
+
+    static void Main(string[] args)
+    {
+        string[] palavra = "U O N O I C N U F".Split(' ');
+        string l1 = palavra[0];
+        string l2 = palavra[1];
+        string l3 = palavra[2];
+        string l4 = palavra[3];
+        string l5 = palavra[4];
+        string l6 = palavra[5];
+        string l7 = palavra[6];
+        string l8 = palavra[7];
+        string l9 = palavra[8];
+        string aux1;
+        string aux2;
+        int n = 0;
+        int n2 = 8;
+
+        while (n <= 4)
+        {
+            aux1 = palavra[n2];
+            palavra[n2] = palavra[n];
+            palavra[n] = aux1;
+            n++;
+            n2--;
+        }
+
+        Console.Write(palavra[0]);
+        Console.Write(palavra[1]);
+        Console.Write(palavra[2]);
+        Console.Write(palavra[3]);
+        Console.Write(palavra[4]);
+        Console.Write(palavra[5]);
+        Console.Write(palavra[6]);
+        Console.Write(palavra[7]);
+        Console.Write(palavra[8]);
+    }
+}
