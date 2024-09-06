@@ -1,0 +1,43 @@
+using System;
+
+class Target2
+{
+
+    static void Main(string[] args)
+    {
+        int termo = 0;
+        int aux1 = 0;
+        int aux2;
+        int contador = 0;
+        int confirm = 0;
+
+        Console.WriteLine("Insira um valor e veja se ele aparece na sequência Fibonacci");
+        int num = int.Parse(Console.ReadLine());
+
+        Console.WriteLine(termo);
+        termo = 1;
+
+        while (contador < 150000)
+        {
+            aux2 = termo + aux1;
+            Console.WriteLine(aux2);
+            termo = aux1;
+            aux1 = aux2;
+            contador++;
+            if (num == aux2)
+            {
+                confirm = 1;
+            }
+        }
+
+        if (confirm == 1)
+        {
+            Console.WriteLine("O número inserido pertence a sequência");
+        }
+        else
+        {
+            Console.WriteLine("O número inserido não pertence a sequência");
+        }
+    }
+
+}
