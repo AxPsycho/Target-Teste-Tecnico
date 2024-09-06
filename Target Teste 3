@@ -1,0 +1,52 @@
+using System;
+
+class Target3
+{
+
+    static void Main(string[] args)
+    {
+        double[] vet_val_fatu = [22174.1664, 24537.6698, 26139.6134, 0.0, 0.0, 26742.6612, 0.0, 42889.2258, 46251.174, 11191.4722, 0.0, 0.0, 3847.4823, 373.7838, 2659.7563, 48924.2448, 18419.2614, 0.0, 0.0, 35240.1826, 43829.1667, 18235.6852, 4355.0662, 13327.1025, 0.0, 0.0, 25681.8318, 1718.1221, 13220.495, 8414.61];
+        int n = 0;
+        double menor_val = vet_val_fatu[0];
+        double maior_val = vet_val_fatu[0];
+        double total = 0;
+        double media = 0;
+        int valid_dia = 0;
+        int dias_maior_q_media = 0;
+
+        while (n <= 28)
+        {
+            n++;
+            if (vet_val_fatu[n] < menor_val)
+            {
+                menor_val = vet_val_fatu[n];
+            }
+            if (vet_val_fatu[n] > maior_val)
+            {
+                maior_val = vet_val_fatu[n];
+            }
+
+            if (vet_val_fatu[n] != 0)
+            {
+                total += vet_val_fatu[n];
+                valid_dia++;
+            }
+        }
+
+        media = total / valid_dia;
+        n = 0;
+        while (n <= 28)
+        {
+            if (vet_val_fatu[n] > media)
+            {
+                dias_maior_q_media++;
+            }
+            n++;
+        }
+
+        Console.WriteLine("O menor valor de faturamento foi de: " + menor_val);
+        Console.WriteLine("O maior valor de faturamento foi de: " + maior_val);
+        Console.WriteLine(dias_maior_q_media + " dias tiveram o valor de faturamento diário superior à média mensal");
+    }
+
+}
