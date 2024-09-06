@@ -1,0 +1,27 @@
+using System;
+
+class Target4
+{
+
+    static void Main(string[] args)
+    {
+        double sp = 67836.43;
+        double rj = 36678.66;
+        double mg = 29229.88;
+        double es = 27165.48;
+        double outros = 19849.53;
+        double total = sp + rj + mg + es + outros;
+
+        double percentual_sp = (sp*100)/total;
+        double percentual_rj = (rj * 100) / total;
+        double percentual_mg = (mg * 100) / total;
+        double percentual_es = (es * 100) / total;
+        double percentual_outros = (outros * 100) / total;
+
+        Console.WriteLine("Percentual SP: " + percentual_sp);
+        Console.WriteLine("Percentual RJ: " + percentual_rj);
+        Console.WriteLine("Percentual MG: " + percentual_mg);
+        Console.WriteLine("Percentual ES: " + percentual_es);
+        Console.WriteLine("Percentual OUTROS: " + percentual_outros);
+    }
+}
